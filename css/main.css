@@ -1,0 +1,162 @@
+:root {
+    --poppins: 'Poppins', monospace;
+    --light-purple: rgb(162, 73, 237);
+    --dark-purple: rgb(24, 4, 34);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    transition: 200ms;
+    text-decoration: none !important;
+}
+
+body {
+    padding: 0 8%;
+    font-family: var(--poppins) !important;
+    background-image: linear-gradient(rgb(49, 22, 71), rgb(24, 4, 34));
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+
+::-webkit-scrollbar-track {
+    background: var(--light-purple);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--dark-purple);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(91, 29, 141);
+}
+
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 12px;
+    right: 24px;
+}
+
+.logo-text {
+    font-weight: 700;
+}
+
+.logo-image {
+    margin-left: 16px;
+    margin-top: 12px;
+    max-width: 104px;
+}
+
+.logo-image:hover {
+    opacity: 0.7;
+}
+
+.bg-purple {
+    border-bottom: solid 1px #9800fd1c;
+    padding: 6px !important;
+    background-color: rgb(54, 16, 73);
+}
+
+.container-box {
+    min-height: 100vh;
+    padding: 0%;
+    position: relative;
+}
+
+img {
+    transition: 500ms;
+    cursor: pointer
+}
+
+img:hover {
+    transform: scale(0.95);
+}
+
+img:active {
+    transform: scale(1.02);
+}
+
+nav ul {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.btn p:hover {
+    color: rgb(214, 169, 250)!important;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 300 !important;
+    color: #fff !important;
+    transition: 500ms;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+    transition: 500ms;
+}
+
+.nav-link:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px var(--light-purple);  
+    transform: scaleX(0);  
+    transition: transform 300ms ease-in-out;
+}
+
+.nav-link:hover:after{
+    transform: scaleX(1);
+}
+
+.nav-item {
+    padding: 0 15px 0 25px;
+}
+
+.home-card {
+    width: 60vw;
+}
+
+.btn-vermais {
+    animation: MoveUpDown 1.5s ease-in-out infinite;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 32px;
+}
+
+.project-image {
+    min-height: 300px;
+    object-fit: cover;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+}
+
+@media (max-width:1100px) {
+    /* .btn-vermais img, a p {
+        display: none !important;
+    } */
+}
+
+@media (max-width: 780px) {
+    .home-card {
+        min-height: 60vh !important;
+        object-fit: cover;
+    }
+}
